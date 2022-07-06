@@ -19,12 +19,10 @@ import java.util.*;
    NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
 */
 
-public class Cgol
-{
+public class Cgol {
 
   //create, initialize, and return  empty board (all cells dead)
-  public static char[][] createNewBoard( int rows, int cols )
-  {
+  public static char[][] createNewBoard( int rows, int cols ){
 		char[][] board = new char[rows][cols];
 		for (int i = 0; i < rows; i++){
 			for (int j = 0; j < cols; j++){
@@ -36,17 +34,15 @@ public class Cgol
 
 
   //print the board to the terminal
-  public static void printBoard( char[][] board )
-  {
+  public static void printBoard( char[][] board ){
 	for(int j = 0; j< board [0].length+2;j++){
 		System.out.print('-');
 	}
 	System.out.println();
 	
-		for(int i=0; i < board.length; i++){
+	for(int i=0; i < board.length; i++){
 		System.out.print('|');
-			for(int j=0; j < board[i].length; j++)
-		{
+		for(int j=0; j < board[i].length; j++){
 			System.out.print(board[i][j]);
 		}
 	System.out.println('|');
@@ -60,14 +56,15 @@ public class Cgol
   //set cell (r,c) to val
   public static void setCell(char[][] board, int r, int c, char val )
   {
-
+		board[r][c] = val;
   }
 
 
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
-		return 3;
+	if (i + r >=0 && j + c >= 0 && i + r < board.length && j + col < board[0].length);
+	return 3;
   }
 
 
