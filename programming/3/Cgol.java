@@ -25,7 +25,7 @@ public class Cgol
   //create, initialize, and return  empty board (all cells dead)
   public static char[][] createNewBoard( int rows, int cols )
   {
-char[] board = new char[rows][cols];
+		char[][] board = new char[rows][cols];
 		for (int i = 0; i < rows; i++){
 			for (int j = 0; j < cols; j++){
 				board[i][j]=' ';
@@ -38,12 +38,27 @@ char[] board = new char[rows][cols];
   //print the board to the terminal
   public static void printBoard( char[][] board )
   {
-
-  }
-
-
+	for(int j = 0; j< board [0].length+2;j++){
+		System.out.print('-');
+	}
+	System.out.println();
+	
+		for(int i=0; i < board.length; i++){
+		System.out.print('|');
+			for(int j=0; j < board[i].length; j++)
+		{
+			System.out.print(board[i][j]);
+		}
+	System.out.println('|');
+		}
+		
+	for(int j = 0; j< board [0].length+2;j++){
+		System.out.print('-');
+	}
+		System.out.println();
+}
   //set cell (r,c) to val
-  public static void setCell( char[][] board, int r, int c, char val )
+  public static void setCell(char[][] board, int r, int c, char val )
   {
 
   }
@@ -52,7 +67,7 @@ char[] board = new char[rows][cols];
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
-
+		return 3;
   }
 
 
@@ -63,19 +78,22 @@ char[] board = new char[rows][cols];
   */
   public static char getNextGenCell( char[][] board,int r, int c )
   {
-
+		return 'a';
   }
 
 
   //generate and return a new board representing next generation
   public static char[][] generateNextBoard( char[][] board )
   {
-
+return board;
   }
 
 
   public static void main( String[] args )
   {
+		char[][] test;
+		test = createNewBoard(5,7);
+		printBoard(test);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     char[][] board;
     board = createNewBoard(25,25);
