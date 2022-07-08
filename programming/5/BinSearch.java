@@ -1,7 +1,9 @@
+import java.io.*;
+
 /**
- * Binary Search by Team Did You Mean Recursion?
- * First Last
- * collaborators: First Last, First Last
+ * Binary Search by Team 7
+ * Joshua Higgins
+ * collaborators: Christine Marra, Dave Ciolino-Volano, Greg Sciame
  */
 
 /**
@@ -20,6 +22,7 @@ public class BinSearch
   public static int binSearch ( int[] a, int target )
   {
     //Q: Why did the designers of this class opt for 2 binSearch methods instead of 1?
+    //A: Ease of use for users.
     //return binSearchRec( /* YOUR SMART CODE HERE */ );
     return binSearchRec( a, target, 0, a.length-1 );
   }
@@ -30,23 +33,29 @@ public class BinSearch
   {
     int tPos = -1; //init return var to flag/signal value
 
-    int mPos = (lo + hi) / 2; //init tracker var for middle position
+    int mPos = (loPos + hiPos) / 2; //init tracker var for middle position
 
     //exit case. If lo & hi have crossed, target not present
-    if ( /* YOUR SMART CODE HERE */ )
-      return /* YOUR SMART CODE HERE */ ;
+    if ( loPos >= hiPos && a[mPos] != target){
+      // System.out.println("Not found");
+      return tPos;
+    }
 
     // target found
-    if ( /* YOUR SMART CODE HERE */ ) {
-      /* YOUR SMART CODE HERE */
+    if ( a[mPos] == target ) {
+      // System.out.println("Found");
+      return mPos;
     }
     // value at mid index higher than target
-    else if ( /* YOUR SMART CODE HERE */ ) {
-      /* YOUR SMART CODE HERE */
+    else if ( a[mPos] > target ) {
+      // System.out.println("Middle above");
+      return binSearchRec(a, target, loPos, mPos);
     }
     // value at mid index lower than target
-    else if ( /* YOUR SMART CODE HERE */ ) {
-      /* YOUR SMART CODE HERE */
+    else if ( a[mPos] < target ) {
+      // System.out.println("Middle below");
+      // Needs +1 due to truncation behavior.
+      return binSearchRec(a, target, mPos+1, hiPos);
     }
 
     return tPos;
@@ -87,7 +96,7 @@ public class BinSearch
   public static void main ( String[] args )
   {
     //move the bar down to uncover tests in succession...
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
     System.out.println("\nNow testing binSearch on int array...");
     //Declare and initialize array of ints
     int[] iArr = { 2, 4, 6, 8, 6, 42 };
@@ -109,6 +118,7 @@ public class BinSearch
     System.out.println( binSearch(iArr2,8) );
     System.out.println( binSearch(iArr2,13) );
     System.out.println( binSearch(iArr2,42) );
+    
     //search for 43 in array
     System.out.println( binSearch(iArr2,43) );
     System.out.println( "now testing binSearch on iArr3..." );
@@ -116,7 +126,7 @@ public class BinSearch
     System.out.println( binSearch(iArr3,8) );
     System.out.println( binSearch(iArr3,5) );
     //search for 43 in array
-    System.out.println( binSearch(iArr3,43) );
+    System.out.println( binSearch(iArr3,43) ); /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     /* YOUR SMART CODE HERE :: Feel free to add extra tests...*/

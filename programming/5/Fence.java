@@ -1,7 +1,7 @@
 /**
- * Recursion Practice with Strings by Team SweatEquity
- * First Last
- * collaborators: First Last, First Last
+ * Recursion Practice with Strings by Team 7
+ * Joshua Higgins
+ * collaborators: Christine Marra, Dave Ciolino-Volano, Greg Sciame
  */
 
 public class Fence
@@ -17,7 +17,12 @@ public class Fence
   */
   public static String fenceR( int n )
   {
-    /* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
+    if(n > 1){
+      return "|--" + fenceR(n-1);
+    }else if(n == 1) {
+      return "|";
+    }
+    return "";
   }
 
 
