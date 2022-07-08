@@ -3,7 +3,7 @@ import java.util.*;
 
 /**
  * Conway's Game of Life by Team 7
- * Joshua Higgins
+ * Dave Ciolino-Volano
  * collaborators: Greg Sciame, Christine Marra, Dave Ciolino-Volano, Joshua Higgins
  */
 

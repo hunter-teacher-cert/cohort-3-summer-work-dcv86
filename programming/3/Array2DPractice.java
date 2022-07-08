@@ -3,7 +3,7 @@ import java.util.*;
 
 /**
  * Array2DPractice by Team LucidThinkeren
- * First Last
+ * Dave Ciolino-Volano
  * collaborators: Adam Driggers, Dave Ciolino-Volano, Alise Braick, Stacy Goldstein
  */
 

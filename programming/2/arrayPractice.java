@@ -1,6 +1,6 @@
 /**
  * ArrayPractice by Team BossCoders (room 4)
- * Michael Randazzo, Dave Ciolino-Volano, Shana Elizabeth Henry, Jerusha Theobald, Tanya Wardally
+ *  Dave Ciolino-Volano, Shana Elizabeth Henry, Jerusha Theobald, Tanya Wardally, Michael Randazzo,
  */
 
 /**
