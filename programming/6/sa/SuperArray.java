@@ -34,7 +34,7 @@ public class SuperArray
 
   // ~~~~~~~~~~~~~~~ CONSTRUCTORS ~~~~~~~~~~~~~~~
   //overloaded constructor -- allows specification of initial capacity
-  public SuperArray( int size )
+  public SuperArray(int size )
   {
     
 		data=new int [size];
@@ -71,15 +71,14 @@ public class SuperArray
        Implement the rest of this method first,
        then only write this section once the rest is tested and working.
     */
-    /* YOUR SIMPLE+SMART CODE HERE */
-
+		
     // add item
     /* YOUR SIMPLE+SMART CODE HERE */
-
+		data[numberElements] = value;
 
     // increment numberElements
     /* YOUR SIMPLE+SMART CODE HERE */
-
+		numberElements = numberElements+1;
   }//end add()
 
 
@@ -87,6 +86,8 @@ public class SuperArray
   {
     //return whether this SuperArray instance is empty
     /* YOUR SIMPLE+SMART CODE HERE */
+
+		return (numberElements == 0);		
   }
 
 
@@ -94,13 +95,18 @@ public class SuperArray
   {
     //return item at index
     /* YOUR SIMPLE+SMART CODE HERE */
+		return(-999);
   }
 
 
   public String toString()
   {
-    //return stringified version of this Object
-    /* YOUR SIMPLE+SMART CODE HERE */
+    String s = "";
+    for (int i = 0; i < numberElements; i++) {
+      s = s + data[i] + ", ";
+    }
+    s = s + "\n";
+    return s;
   }//end toString()
 
 
