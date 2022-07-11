@@ -71,7 +71,9 @@ public class SuperArray
        Implement the rest of this method first,
        then only write this section once the rest is tested and working.
     */
-		
+		if (numberElements==data.length){
+      grow();
+    }
     // add item
     /* YOUR SIMPLE+SMART CODE HERE */
 		data[numberElements] = value;
@@ -131,8 +133,14 @@ public class SuperArray
     // shift items down to remove the item at index
     /* YOUR SIMPLE+SMART CODE HERE */
 
+    
+    for (int i = index; i < data.length-1; i++ ){
+      data [i]=data[i+1];
+    }
+    
     // subtract fom numElements;
     /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements--;
   }
 
 
@@ -140,13 +148,18 @@ public class SuperArray
   {
     // see if there's enough room
     /* YOUR SIMPLE+SMART CODE HERE */
-
+		if (numberElements==data.length){
+      grow();
+    }
     // shift elements toward the end of the array
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    for (int i = data.length-1; i>index;i--){
+      data[i]=data[i-1];
+    }
+    data[index]=value;
     // insert new element
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    numberElements++;
     // increment numElements
     /* YOUR SIMPLE+SMART CODE HERE */
   }
@@ -157,10 +170,13 @@ public class SuperArray
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    int[] dataNew = new int[data.length+1];
     // copy over all the elements from the old array to the new one
     /* YOUR SIMPLE+SMART CODE HERE */
-
+    for (int i = 0; i<data.length;i++){
+      dataNew[i]=data[i];
+    }
+    data = dataNew;
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
