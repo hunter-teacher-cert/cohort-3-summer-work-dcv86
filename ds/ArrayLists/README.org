@@ -1,0 +1,14 @@
+* ArrayLists
+
+* Lab Assignment
+
+** Directory/Folder: ds/arraylists
+** File(s): AlPractice.java
+* Instructions:
+
+1. Copy AlPractice.java into your work repo under ds/arraylists.
+2. Complete the methods in the file.
+
+
+See the file AlPractice.java for more details.
+
