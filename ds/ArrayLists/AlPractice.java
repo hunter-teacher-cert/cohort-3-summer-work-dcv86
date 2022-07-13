@@ -109,7 +109,11 @@ public class AlPractice{
   - The parameter ArrayLists should not be modified.
   */
   public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
-    return null;//placeholder to compile.
+  ArrayList <Integer> arraySum = new ArrayList();
+      for (int i = 0; i < ListA.size(); i++){
+      arraySum.add (ListA.get(i) + ListB.get(i));
+      }
+    return arraySum;//placeholder to compile.
   }
 
   /** zipLists
