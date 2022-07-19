@@ -35,7 +35,8 @@ public class LinkedList{
   */
   public void add(String value){
     Node a = new Node (value, head);
-		head = a;
+    head = a;
+		//head = a;
   }
 
   /**
@@ -67,14 +68,26 @@ public class LinkedList{
   Return a string representation of the list
   */
   public String toString(){
-    return "";
+    Node walker = head;
+    String myString = "";
+    while(walker != null){
+      myString += walker.toString();
+      walker = walker.getNext();
+    }
+    myString += "NULL";
+    return myString;
   }
 
   /**
   returns the number of elements in the list
   */
   public int size(){
-    return 0;
+    int counter = 0;
+    Node walker = head;
+    while(walker != null){
+      counter++;
+    }
+    return counter;
   }
 
 
@@ -91,10 +104,23 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
-
+    
+     if (index ==0){
+       this.add(value); 
+    }else{
+        Node walker = head;
+    Node myNode = new Node(value);
+    
+    for(int i = 0; i < index-1 && walker.getNext() != null;
+        i++){
+      // if index > size append to end as per condition of for loop
+      walker = walker.getNext();
+    }
+    
+    myNode.setNext(walker.getNext());
+    walker.setNext(myNode);
   }
-
-
+}
   /**
   Returns the index (location) of the first node in the list
   that contains value.
@@ -104,6 +130,15 @@ public class LinkedList{
   indexOf("d") would return 3 since "d" is at location 3.
   */
   public int indexOf(String value){
+    Node walker = head;
+    int counter = 0;
+    while(walker != null){
+      if (walker.getData() == value){
+        return counter;  
+      }
+      walker = walker.getNext();
+      counter++;
+    }
     return 0;
   }
 
@@ -115,6 +150,7 @@ public class LinkedList{
   the array.
   */
   public String[] toArray(){
+    String [] a = new String[.size()]
     return null;
   }
 
@@ -132,4 +168,3 @@ public class LinkedList{
   public void remove(int index){
   }
 }
-Footer
