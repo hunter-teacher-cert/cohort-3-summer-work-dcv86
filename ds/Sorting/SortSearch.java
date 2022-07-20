@@ -9,8 +9,8 @@ Part 1:  (BASIC)
   the behavior of the constructors. (Done 7/19/22 11:12)
 
   Part 2: (BASIC)
-  1. Read the description of findSmallestIndex and complete the method.
-  2. Uncomment the lines in SortProjectDriver to test.
+  1. Read the description of findSmallestIndex and complete the method. (Done 7/20)
+  2. Uncomment the lines in SortProjectDriver to test. (Done 7/20)
 
   Part 3: (INTERMEDIATE)
   1. Complete the sort method - read comments for description
@@ -64,7 +64,7 @@ public class SortSearch{
       
       Example, if the arraylist has:
       5,3,10,6,8
-      data[3] <- 6
+      data[3] <- 6 // arrayName[index]
       if start was 2 (start at index 2, value 10) then it would return 3
       which is the index of the value 6 which is the index with the
       smallest value from start to end
@@ -73,9 +73,15 @@ public class SortSearch{
       
     */
     public int findSmallestIndex(int start){
+      // smallIndex is the LOCATION of the smallest value
     	int smallIndex = start;
-    	for(int i = start; i < data.length; i++){
-				if (smallIndex < start)
+    	for(int i = start; i < data.size(); i++){
+        // Need to reference the actual VALUES\
+        // data is the name of the array list
+        // EX: data[0] < data[1] checks VALUE at 0 < VALUE at 1
+				if (data.get(i) < data.get(smallIndex)){
+					smallIndex = i;
+				}
 			}
     	return smallIndex;
     }
