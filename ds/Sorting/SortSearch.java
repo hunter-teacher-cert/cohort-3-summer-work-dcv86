@@ -98,10 +98,18 @@ public class SortSearch{
 	 
        
     */
-    public void sort(){
+   //  public void sort(){
+			// int smallIndex=0;
+			// 	for(int i = 0; i < data.size(); i++){
+			// 		smallIndex = findSmallIndex(i);
 
-
-    }
+			// 		int temp;
+			// 		temp = data.get(i);
+			// 		data.set(i); = data.get(smallIndex);
+			// 		data.set(smallIndex) = temp;
+			// 	}
+	
+   //  }
 
 
 
