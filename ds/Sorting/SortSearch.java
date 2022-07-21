@@ -138,16 +138,35 @@ public class SortSearch{
        
        This algorithm only works on sorted ArrayLists.
     */
-    public int binarySearch(int value){
+     public int binarySearch(int value){
+      int high = data.size()-1;
+      int mid;
+      int low = 0;
 
 	// create assign variables  representing the high, low and middle indices 
 	// while we're not done:
 	//   if the item is at data.get(middle), return middle
 	//   otherwise, update high, low, and middle
+      
+      while (high >= low){
+        mid = (low + high) / 2;
+        if (value < data.get(mid)){
+          high = mid - 1;
+        } 
+        else if (value > data.get(mid)){
+          low = mid + 1;
+        }
+        else
+      return mid;
+      }
 
-	    return 0;
+	return -1;
 	    
     }
+
+	   //  return 0;
+	    
+    // }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
