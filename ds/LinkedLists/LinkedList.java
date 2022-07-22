@@ -149,10 +149,10 @@ public class LinkedList{
   It should then copy all of the values to the array and return
   the array.
   */
-  public String[] toArray(){
-    String [] a = new String[.size()]
-    return null;
-  }
+  // public String[] toArray(){
+  //   String [] a = new String[.size()]
+  //   return null;
+  // }
 
 
 
