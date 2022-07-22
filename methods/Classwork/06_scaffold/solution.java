@@ -1,9 +1,10 @@
+
+
 //1. Before you start, be sure to import the two Java API.
 
 import java.io.*;
 import java.util.*;
 
-//2. Create a p
 
 public class activity {
   public static void main (String[] args){

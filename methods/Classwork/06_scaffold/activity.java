@@ -1,9 +1,17 @@
+
 //1. Before you start, be sure to import the two Java API.
 
 import java.io.*;
 import java.util.*;
 
-//2. Create a p
+
+//Directions: 
+// Please complete these methods in order
+// 1. size
+// 2. sum
+// 3. indexOfMax
+// 4. powArray
+//Once complete unmark the section of the main to test each method
 
 public class activity {
   public static void main (String[] args){
@@ -28,37 +36,49 @@ public class activity {
     // System.out.println(indexOfMax(a));
   }
   //provide cheat sheet scafold of ++, += notation, for loops, or reference our code wall
-  //create method to find the size of a 1D array
+  
+  //Write a method to find the size of a 1D array
   public static int size (double[] a){
     int size = 0;//provided?
+    
+    //put your code in here
 
+    
+    return size;//provided
   }
- // 
+
+  
+ // Write a method here to determine the sum of all of the elements in an array. You will do this by iterating over the array and updating the provided sum variable.
   public static int sum (double [] a){
     int sum = 0;  //provided
-    for ( int i = 0; i < a.length; i++){
-        sum += a[i];
-      }
-    return sum;
+   
+    //put your code in here
+
+     
+    return sum;//provided
   }
 
  
 
-  
+  //Write a method here to find the index of the Max value in an array
   public static int indexOfMax(double[] a){
-    int maxitemindex = 0;
-    for(int i = 1; i < a.length; i++)
-      if(a[i] > a[maxitemindex]){
-        maxitemindex = i;
-      }
-    return maxitemindex;
+    int maxitemindex = 0;//provided
+    
+    //put your code in here
+
+    
+    return maxitemindex;//provided
   } 
-public static void powArray(double[] a, int pow){
-    double[] b = new double[a.length];
-    for (int i = 0; i < a.length; i++) { 
-      b[i] = Math.pow(a[i], pow);
+
+  
+    //Write a method here to raise each intem in an array to some power
+  public static void powArray(double[] a, int pow){
+      double[] b = new double[a.length];//provided
+      
+    //put your code in here
+
+   
+    System.out.println(Arrays.toString(b));//provided
     }
-    System.out.println(Arrays.toString(b));
-  }
   
   }
