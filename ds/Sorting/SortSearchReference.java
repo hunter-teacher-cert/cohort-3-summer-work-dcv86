@@ -1,28 +1,15 @@
+
 import java.io.*;
 import java.util.*;
 
-/*
-Sort Project:
-Part 1:  (BASIC)
-  1. Analyze the two constructors - try to figure out how they work.(Done 7/19/22 11:12)
-  2. Compile and run the program (SortProjectDriver.java and SortProject.java) and confirm
-  the behavior of the constructors. (Done 7/19/22 11:12)
-
-  Part 2: (BASIC)
-  1. Read the description of findSmallestIndex and complete the method. (Done 7/20)
-  2. Uncomment the lines in SortProjectDriver to test. (Done 7/20)
-
-  Part 3: (INTERMEDIATE)
-  1. Complete the sort method - read comments for description
-  2. Uncomment the lines in sortProjectDriver to test.
-
-Search Project:
-  1. Complete the linear search (BASIC)
+/* 
+   Search Project:
+   1. Complete the linear search (BASIC)
   2. Complete the binary search (Intermediate)
   3. Complete the recursive version of binary search (Advanced)
 */
 
-public class SortSearch{
+public class SortSearchReference{
 
     /* Sort project starts here */
     
@@ -32,27 +19,27 @@ public class SortSearch{
     private Random r; 
 
     
-    public SortSearch(){
-    	data = new ArrayList<Integer>();
-    	r = new Random();
-    	for (int i=0;i<15;i++){
-    	    data.add(r.nextInt(20));
-    	}
+    public SortSearchReference(){
+	data = new ArrayList<Integer>();
+	r = new Random();
+	for (int i=0;i<15;i++){
+	    data.add(r.nextInt(20));
+	}
 	
     }
     
-    public SortSearch(int size){
-    	data = new ArrayList<Integer>();
-    	r = new Random();
-    	for (int i=0;i<size;i++){
-    	    data.add(r.nextInt(20));
-    	}
+    public SortSearchReference(int size){
+	data = new ArrayList<Integer>();
+	r = new Random();
+	for (int i=0;i<size;i++){
+	    data.add(r.nextInt(20));
+	}
 	
     }
 
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
-    	return this.data.get(index);
+	return this.data.get(index);
     }
     
 
@@ -64,7 +51,6 @@ public class SortSearch{
       
       Example, if the arraylist has:
       5,3,10,6,8
-      data[3] <- 6 // arrayName[index]
       if start was 2 (start at index 2, value 10) then it would return 3
       which is the index of the value 6 which is the index with the
       smallest value from start to end
@@ -73,17 +59,16 @@ public class SortSearch{
       
     */
     public int findSmallestIndex(int start){
-      // smallIndex is the LOCATION of the smallest value
-    	int smallIndex = start;
-    	for(int i = start; i < data.size(); i++){
-        // Need to reference the actual VALUES\
-        // data is the name of the array list
-        // EX: data[0] < data[1] checks VALUE at 0 < VALUE at 1
-				if (data.get(i) < data.get(smallIndex)){
-					smallIndex = i;
-				}
-			}
-    	return smallIndex;
+	int smallIndex = start;
+	int i;
+	for (i=start;i<data.size();i++){
+	    if (data.get(i) < data.get(smallIndex)){
+		smallIndex = i;
+	    }
+	    
+	}
+	
+	return smallIndex;
     }
 
 
@@ -99,17 +84,17 @@ public class SortSearch{
        
     */
     public void sort(){
-			int smallIndex=0;
-				for(int i = 0; i < data.size(); i++){
-					
-
-					int temp;
-					smallIndex = findSmallestIndex(i);
-					temp = data.get(i);
-					data.set(i,data.get(smallIndex));
-					data.set(smallIndex, temp);
-				}
+	int i;
+	int tmp;
+	int smallIndex;
+	for (i=0;i<data.size();i++){
+	    smallIndex = findSmallestIndex(i);
+	    tmp = data.get(smallIndex);
+	    data.set(smallIndex,data.get(i));
+	    data.set(i,tmp);
+	}
 	
+
     }
 
 
@@ -124,49 +109,48 @@ public class SortSearch{
        This algorithm works on any ArrayList.
     */
     public int linearSearch(int value){
-			// int index = -1;
-			for (int i = 0; i < data.size(); i++){
-				if(value == data.get(i)){
-					return i;
-				}
-			}
-        return -1; // replace this return
-		}
+	int i = 0;
+	for (i=0;i<data.size();i++){
+	    if (data.get(i)==value)
+		return i;
+	}
+	return -1;
+	
+    }
     
     /**
        Implement a binary search as specified by the comments
        
        This algorithm only works on sorted ArrayLists.
     */
-     public int binarySearch(int value){
-      int high = data.size()-1;
-      int mid;
-      int low = 0;
+    public int binarySearch(int value){
 
-	// create assign variables  representing the high, low and middle indices 
+	// create assign variables  representing the high, low and middle indices
+	int high, low, middle;
+
+	high = data.size();
+	low  = 0;
+	
 	// while we're not done:
 	//   if the item is at data.get(middle), return middle
 	//   otherwise, update high, low, and middle
-      
-      while (high >= low){
-        mid = (low + high) / 2;
-        if (value < data.get(mid)){
-          high = mid - 1;
-        } 
-        else if (value > data.get(mid)){
-          low = mid + 1;
-        }
-        else
-      return mid;
-      }
+	while (high >= low){
+	    middle = (high+low)/2;
 
+	    if (data.get(middle)==value){
+		return middle;
+	    } else if (data.get(middle) > value){
+		high = middle - 1;
+	    } else {
+
+		low = middle + 1;
+	    }
+	    
+		}
+	
 	return -1;
 	    
     }
-
-	   //  return 0;
-	    
-    // }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
@@ -175,26 +159,38 @@ public class SortSearch{
     */
 
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
-
-	// refer to class discussion
+	if (lowIndex > highIndex)
+	    return -1;
 	
-  	  return 0;  
+	int middle = (lowIndex + highIndex)/2;
+
+	if (data.get(middle)==value){
+	    return middle;
+	} else if (data.get(middle) > value){
+	    return binarySearchRecursive(value,lowIndex,middle-1);
+	} else {
+	    return binarySearchRecursive(value,middle+1,highIndex);
+	}
+	
 	    
+    }
+    public int binarySearchRecursive(int value){
+	return binarySearchRecursive(value,0,data.size());
     }
     
 	
     public String toString(){
-  	  return ""+data;  
+	return ""+data;
     };
 
 
     public void builtinSort(){
-	    Collections.sort(data);
+	Collections.sort(data);
 	
     }
+    
 
-
-   /* Merge Sort Stuff after here */
+    /* Merge Sort Stuff after here */
     /**
        Builds and returns an ArrayList that's already in increasing order.
        You can use this method to test your merge method.
@@ -222,47 +218,16 @@ public class SortSearch{
        The new list will contain:
        [1, 3, 5, 6, 10, 17, 25, 30, 40, 50]
        
-    */    
-    public ArrayList<Integer> merge( ArrayList<Integer> list1,
+    */
+       
+    public ArrayList<Integer> merge(ArrayList<Integer> list1,
 				    ArrayList<Integer> list2){
-      
-      //create a new ArrayList list3 to hold the values from list1 & list2 
-			ArrayList<Integer> list3 = new ArrayList<Integer> ();
 
-      //use i and j to keep track of where we are in list 1 & list2
-      int i = 0;
-      int j = 0;
-			
-      for(int k = 0; k < list3.size(); k++){
-        // Case 1: if at the end of list1, pull from list2
-
-        // Case 2: if at the end of list2, pull from list1
-
-
-        // Case 3: otherwise, compare the first element from each list. 
-      }
-
-
-      
-      
-
-//case 1: if(i at end) --> pull from j
-//case 2: if(j finisehd first) --> pull from i
-
-//case 3: choose 1
-
-//compare elements in list1 & list2
-//p;ck minimal numbers
-//add to list
-//increment i or j by 1
-//compare again
-//...
-    
-    
-    return new ArrayList<Integer>(); // replace this line
+	// code for merge
+	
+	return new ArrayList<Integer>(); // replace this line
     }
 
     
-
     
 }
