@@ -3,6 +3,8 @@
 ### _Overview: Students will be provided with a non-working "Game of Nim" code, which has been infected with a variety of bugs! For this activity, students must employ a variety of debugging techniques to correct the syntax errors._
 [More about the Game of Nim](https://plus.maths.org/content/play-win-nim)
 
+![](https://images.fanart.tv/fanart/the-dirty-dozen-53220ba1ae495.png)
+
 ### Activity:
 1. Navigate to and compile the Debugging.java file
 2. There are several syntax errors in the program.
