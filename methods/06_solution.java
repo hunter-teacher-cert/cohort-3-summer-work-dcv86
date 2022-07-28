@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class activity {
+public class 06_scaffold {
   public static void main (String[] args){
     double[] a = {0, 1, 2, 3};
     System.out.println(Arrays.toString(a));

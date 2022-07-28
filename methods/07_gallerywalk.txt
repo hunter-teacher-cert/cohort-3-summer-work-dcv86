@@ -1,0 +1,29 @@
+Dave Ciolino-Volano Methods Summer 2022
+gallery walk LOG
+
+DISCOVERIES (any cool tips/tricks/hacks learned):
+* Special characters are still displayed in the html
+* Can use HTML to form
+
+LINGERING QUESTIONS:
+* is there a spell check?
+
+COMMENTS/CONCERNS/OTHER:
+
+
+SITES:
+-
+site:
+https://jenna0704.github.io/nycscertweb/
+aspect:
+Great use of tables
+--
+site:
+https://marieke-thomas.github.io/nycscertweb/
+ aspect:
+Shadows behind text boxes, very clean layout
+--
+site:
+https://kmaschm.github.io/nycscertweb/
+aspect:
+Each class is linked to its own page
