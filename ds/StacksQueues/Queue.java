@@ -23,8 +23,9 @@ public class Queue{
       return -1;
     }
     else{
-      value = LL.get(LL.size()-1);
-      
+      value = LL.get(LL.size() - 1);
+      LL.remove(LL.size() - 1);
+      return value;
     }
   }
 
