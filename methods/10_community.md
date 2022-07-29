@@ -1,16 +1,16 @@
 # Community Building Techniques
 #### written with collaborative input from Team hashtagBEGUDFAM
-Roster: First Last, First Last, First Last
+Roster: Dave, David, Vanessa, Ben
 
 ### Environment
-* school size: APPROXIMATE NUMBER OF STUDENTS
-* school grade range: LO-HI
-* faculty count: NUMBER OF FULL-TIME CS TEACHERS
-* courses: LIST OF CS COURSES YOUR SCHOOL OFFERS
+* school size: 750
+* school grade range: 6-12
+* faculty count: 0.5 (me)
+* courses: 6th Robotics, 7th Grade Digital Literacy, 8th Grade CS Discoveries, HS Intro to CS, AP Computer Science Princples. 
 
 * * *
 
-### Club|Organization|Initiative|System: NAMEOFTHING
+### Club|Organization|Initiative|System: Computer Science
 
 #### Expected Positive Outcomes
 This is attractive because...
